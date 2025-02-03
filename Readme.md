@@ -1,9 +1,8 @@
-# JanyBorder in Steroids with colorpicker 
+# JankyBorder in Steroids with colorpicker
 
 <img align="right" width="50%" src="images/picker.png" alt="Borders Color Picker">
 
-**Borders Color Picker** is a Fyne-based GUI tool written in Go that lets you dynamically update the border properties of the [JankyBorders](https://github.com/FelixKratz/JankyBorders) binary. 
-
+This is a Fyne-based GUI tool written in Go that lets you dynamically update the border properties of the [JankyBorders](https://github.com/FelixKratz/JankyBorders) binary.
 
 With this tool you can adjust:
 
@@ -26,7 +25,7 @@ With this tool you can adjust:
 
 ## Prerequisites
 
-- [Go](https://golang.org/) (version 1.16+ recommended)
+- [Go](https://golang.org/) (latest greatest, whatever, mine: go1.23.5)
 - [Fyne](https://fyne.io/) (GUI framework for Go)
 - [lusingander/colorpicker](https://github.com/lusingander/colorpicker)
 - The `borders` binary from [JankyBorders](https://github.com/FelixKratz/JankyBorders) must be available in your PATH.
@@ -36,33 +35,22 @@ With this tool you can adjust:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/border-picker.git
-   cd border-picker
-
-2.	Install Dependencies:
-
-go get fyne.io/fyne/v2
-go get github.com/lusingander/colorpicker
-
-
-3.	Build the Application:
-
-go build -o border_picker main.go
-
-
+   git clone https://github.com/thapakazi/border-colorpicker.git
+   cd border-colorpicker
+   go get
+   go run main.go
+   ```
 
 ## Usage
-	1.	Ensure the borders binary is available in your PATH.
-	2.	Run the application:
+First ensure the borders binary is available in your PATH.
+```
+go build  -o bcolorpik main.go
+./bcolorpik
+```
 
+Your changes are applied in real time by re-launching the borders binary with updated options, and your selections are saved to ~/.config/border_picker.json for future sessions.
 
-	3.	Use the GUI to select your active color, inactive color, and border width.
-	    •	The color pickers display the selected hex value along with a color sample.
-	    •	The border width slider (ranging from 0 to 20) has been extended (e.g., 300 pixels wide) for easier adjustment.
-
-    Your changes are applied in real time by re-launching the borders binary with updated options, and your selections are saved to ~/.config/border_picker.json for future sessions.
-
-## Configuration File
+### Configuration File
 
 The configuration file is stored at ~/.config/border_picker.json and holds your current selections in JSON format. An example configuration file looks like:
 ```js
@@ -72,12 +60,9 @@ The configuration file is stored at ~/.config/border_picker.json and holds your 
   "border_width": 6.0
 }
 ```
-## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Acknowledgements
-	•	[Fyne](https://fyne.io/)
-	•	[lusingander/colorpicker](https://github.com/lusingander/colorpicker)
-	•	[JankyBorders](https://github.com/FelixKratz/JankyBorders)
+## Thanks 🙇🏼 
+- [Fyne](https://fyne.io/)
+- [lusingander/colorpicker](https://github.com/lusingander/colorpicker)
+- [JankyBorders](https://github.com/FelixKratz/JankyBorders)
 
